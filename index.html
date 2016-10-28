@@ -6,9 +6,165 @@
   <title>Lisa Kwak (Terada), MA, LMHCA | An Asian Family Counselor</title>
   <meta name="description" content="An Asian Family Counselor">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
-  <link rel="stylesheet" href="normalize.min.css">
-  <link rel="stylesheet" href="main.css">
+  <style>
+    html {
+      color: #222;
+      font-size: 1em;
+      line-height: 1.4;
+    }
+
+    body {
+      font-size: 16px;
+      line-height: 1.625;
+      font-family: 'Source Sans Pro', Helvetica, Helvetica Neue, Arial;
+      font-weight: 400;
+      padding: 0;
+      margin: 0;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-weight: 600;
+    }
+
+    .wrapper {
+      width: 90%;
+      margin: 0 5%;
+    }
+
+    .header-container,
+    .footer-container {
+      background: #2d6da1;
+    }
+
+    .main aside {
+      background: #efefef;
+    }
+
+    a {
+      color: #247a97;
+      cursor: pointer;
+    }
+
+    .title {
+      color: white;
+    }
+
+    .img-responsive {
+      max-width: 100%;
+    }
+
+    .main {
+      padding: 30px 0;
+    }
+
+    .main article h1 {
+      font-size: 2em;
+    }
+
+    .main article h2 {
+      color: #247a97;
+    }
+
+    .main aside {
+      margin-top: 21px;
+      padding: 0 5% 10px;
+    }
+
+    .main header {
+      margin-bottom: 4em;
+    }
+
+    .main section {
+      margin-bottom: 40px;
+      padding-top: 20px;
+    }
+
+    nav {
+      margin: 0;
+      padding: 0;
+      display: block;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+
+    nav ul li {
+      margin: 0 15px 0 0;
+      padding: 0;
+      display: inline-block;
+    }
+
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1em 0;
+      padding: 0;
+    }
+
+    .footer-container footer {
+      color: white;
+      padding: 20px 0;
+    }
+
+    @media only screen and (min-width: 768px) {
+
+      /* ====================
+          WIDE: CSS3 Effects
+         ==================== */
+
+      .header-container {
+        -webkit-box-shadow: 0 1px 10px #aaa;
+        -moz-box-shadow: 0 1px 10px #aaa;
+        box-shadow: 0 1px 10px #aaa;
+      }
+
+      /* ============
+          WIDE: Main
+         ============ */
+
+      .main article {
+        float: left;
+        width: 61%;
+      }
+
+      .main aside {
+        float: right;
+        width: 24%;
+      }
+    }
+
+    @media only screen and (min-width: 1140px) {
+
+      /* ===============
+          Maximal Width
+         =============== */
+
+      .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+      }
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+      content: " ";
+      display: table;
+    }
+
+    .clearfix:after {
+      clear: both;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -136,5 +292,22 @@
     <p>Copyright © Lisa Kwak (Terada), M.Div., M.A, LMHCA 2016. All Rights Reserved.</p>
     </footer>
   </div>
+
+  <noscript id="deferred-styles">
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600">
+  </noscript>
+  <script>
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+  </script>
 </body>
 </html>
